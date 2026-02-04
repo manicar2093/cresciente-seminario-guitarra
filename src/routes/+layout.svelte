@@ -5,8 +5,6 @@
 	let { children } = $props();
 </script>
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-</svelte:head>
-
-{@render children?.()}
+<div class="m-5">
+	{@render children?.()}
+</div>

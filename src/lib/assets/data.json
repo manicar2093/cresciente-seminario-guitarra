@@ -1,0 +1,202 @@
+[
+	{
+		"title": "NOTAS Y MAPEO",
+		"text": "Elegir una nota natural (Do, Re, Mi, Fa, Sol, La o Si) y ubicarla en todos los lugares del mástil que puedas.",
+		"comments": "Si estás comenzando, mantente en las primeras posiciones. Si quieres darle una dificultad extra, usa posiciones más agudas"
+	},
+	{
+		"title": "NOTAS Y MAPEO",
+		"text": "Elegir una nota bemol (Re♭, Mi♭, Sol♭, La♭ o Si♭) y ubicarla en todos los lugares del mástil que puedas.",
+		"comments": "Modificación: si quieres sumarle dificultad, di en voz alta el equivalente enarmónico (Si bemol = La sostenido)."
+	},
+	{
+		"title": "NOTAS Y MAPEO",
+		"text": "Elegir una nota sostenida (Do♯, Re♯, Fa♯, Sol♯ o La♯) y ubicarla en todos los lugares del mástil que puedas.",
+		"comments": "Modificación: si quieres sumarle dificultad, di en voz alta el equivalente enarmónico (Si bemol = La sostenido)."
+	},
+	{
+		"title": "NOTAS Y MAPEO",
+		"text": "Elegir una nota natural, tocarla y tocar también su versión en sostenido y en bemol. Decir el nombre en voz alta. Luego buscar otras posiciones.",
+		"comments": "Tip: se ejemplo, trata simplemente de elegir, por la nota La, y luego tocar La bemol y La sostenido."
+	},
+	{
+		"title": "NOTAS Y MAPEO",
+		"text": "Elegir 2 notas aleatorias, decir su nombre en voz alta y buscarlas en varias posiciones, alternando entre ellas para hacer “música” con esas 2 notas en distintas octavas.",
+		"comments": "Si juegas con el ritmo y los cambios de octava, puedes encontrar resultados muy musicales. Pueden ser notas naturales, sostenidos o bemoles."
+	},
+	{
+		"title": "NOTAS Y MAPEO",
+		"text": "Elegir 3 notas aleatorias, decir su nombre en voz alta y buscarlas en varias posiciones, alternando entre ellas para hacer “música” con esas 3 notas en distintas octavas.",
+		"comments": "Modificación: elegir una de las notas como “tónica” y grabar una pequeña pista con una sola nota, e improvisar encima con las 3 notas."
+	},
+	{
+		"title": "NOTAS Y MAPEO",
+		"text": "Con la ayuda del diagrama, toca la escala de Do mayor en primera posición y ve diciendo los nombres de nota en voz alta. Después toca cualquiera de sus notas y dí en voz alta el nombre de nota.",
+		"comments": "Modificación: usar otras posiciones de la misma escala, u otras escalas mayores o menores."
+	},
+	{
+		"title": "NOTAS Y MAPEO",
+		"text": "Teniendo a mano el diagrama de todas las notas en la guitarra, toca una nota al azar en cualquier posición (a ojos cerrados) y, con la ayuda del diagrama, di en voz alta su nombre de nota.",
+		"comments": "Modificación: intentar deducir el nombre de la nota sin ayuda del diagrama. Si es sostenido o bemol, decir los dos nombres."
+	},
+	{
+		"title": "ACORDES COMPLEJOS",
+		"text": "Elegir una fundamental en quinta cuerda y tocar todas las especies con séptima sobre esta fundamental (deduciendo y de memoria). Llevar esa misma fundamental (o la octava) a la sexta cuerda y repetir el procedimiento.",
+		"comments": "La idea es pasar de maj7 a 7, de 7 a m7, de m7 a m7(b5), etc. Para mayor dificultad, comenzar desde una inversión"
+	},
+	{
+		"title": "ACORDES COMPLEJOS",
+		"text": "Elegir 2 acordes con séptima que sean parte de un mismo campo armónico, y busca 4 formas distintas de enlazar esa progresión. Busca distintas texturas para tocarla. Si te aburres, transponer una cuarta o quinta hacia arriba y repetir.",
+		"comments": "Para mayor dificultad, puedes ir añadiendo algunas tensiones."
+	},
+	{
+		"title": "ACORDES COMPLEJOS",
+		"text": "Elige dos fundamentales aleatorias sin una relación tonal evidente. Vas a construir sobre cada una las distintas especies de suspendidos (sus2, sus4, 7sus) y vas a ir buscando cómo enlazar los acordes (siguiendo solo tu oído).",
+		"comments": "Una vez que vayas conociendo la sonoridad, elige el par que más te guste. Si te aburres, cambia las fundamentales."
+	},
+	{
+		"title": "ACORDES COMPLEJOS",
+		"text": "Construye una pequeña progresión de acordes con séptima, busca algunas posiciones y grábala. Ahora intenta improvisar encima con las notas del acorde (arpegios), usando primero solo 2 notas por cada acorde, después 3, después 4 y después libre.",
+		"comments": "Este es un ejercicio de límites. Cuando estés con 2 notas, enfócate en enlazar y en el ritmo."
+	},
+	{
+		"title": "ACORDES COMPLEJOS",
+		"text": "Elige una tonalidad mayor o menor y estudia la progresión V7 - I, incluyendo cada vez distintas tensiones (y combinaciones) sobre el dominante (♭9, 9, ♭13, 13). Cuando te aburras, cambia de tonalidad una cuarta ascendente.",
+		"comments": "Para más las dificultad, usar tonalidades a las que no estés acostumbrad@ y decir en voz alta notas (incluyendo tensiones)."
+	},
+	{
+		"title": "ACORDES COMPLEJOS",
+		"text": "Arma una progresión que utilice dominantes secundarios (ej. Cmaj7 - A7 - D7 - G7). Sobre cada uno de los dominantes, explora distintas tensiones (♭9, 9, ♭13, 13) y deja que tu oído vaya fijando algunas.",
+		"comments": "Para más dificultad, puedes incluir dos disposiciones para cada acorde (con distintas tensiones) o añadir un II relacionado."
+	},
+	{
+		"title": "ACORDES COMPLEJOS",
+		"text": "Construye una progresión de acordes de tríada, mayores y menores, y añade a cada acorde una novena: te quedarán solo especies m(add9) y (add9). Cuando lo tengas resuelto transponer una cuarta o una quinta.",
+		"comments": "En general hay pocas formas de disponer un add9. Para mayor complejidad, omitir la fundamental (y dejarla para el bajo)."
+	},
+	{
+		"title": "CAGED",
+		"text": "Escribe una progresión de acordes diatónica en un papel, y busca todas las posibilidades para tocarla dentro de la guitarra, usando el sistema CAGED (de forma completa y parcial).",
+		"comments": "Si quieres más dificultad puedes añadir dispositivos armónicos como intercambio modal o dominantes secundarios."
+	},
+	{
+		"title": "CAGED",
+		"text": "Toma una canción sencilla, busca su armonía y encuentra 4 formas de encadenar esos acordes usando el CAGED. Escribirlas (de la forma que sea que te quede cómodo).",
+		"comments": "Si te animas y alcanzas, puedes grabar esa base y luego complementar con otra guitarra encima, buscando otra textura (arpegios o palm mute, por ejemplo)"
+	},
+	{
+		"title": "CAGED",
+		"text": "Construir una progresión simple en cualquier tonalidad y tocarla en una zona cómoda usando CAGED. Cuando salga fluida, transponerla a una tonalidad una cuarta o una quinta arriba. Repetir ad infinitum.",
+		"comments": "Este ejercicio te obligará a buscar distintas posiciones. Para más dificultad añadir 7mas."
+	},
+	{
+		"title": "CAGED",
+		"text": "Arma una progresión (2 a 4 acordes), grabala lento y busca los arpegios del CAGED para cada acorde. Tocalos primero de forma mecánica (sobre la base) y de a poco construye líneas melódicas siguiendo la armonía.",
+		"comments": "Modificación: intentar enlazar cada acorde con el siguiente (ej. de C a Em, usar Do - Si para pasar al Em)."
+	},
+	{
+		"title": "CAGED",
+		"text": "Toma una fundamental como punto de partida y construye un acorde de especie 7 (dominante) usando el CAGED. Ahora resuelve ese acorde 7 hacia otro acorde 7 una cuarta arriba. Sigue hasta que pases por las 12 notas.",
+		"comments": "Es más difícil si lo haces con CAGED parcial, ya que a veces no tienes la fundamental tan a mano como para guiarte."
+	},
+	{
+		"title": "ESCALAS",
+		"text": "Elegir una escala y una posición y tocarla de inicio a fin con un metrónomo, lento y pulcro, diciendo en voz alta cada nota. Luego pasar a otra posición de la misma escala.",
+		"comments": "Comenzar con Do mayor en primera posición, y con el tiempo ampliar a otras posiciones y otras escalas. Puedes usar un diagrama como ayuda."
+	},
+	{
+		"title": "ESCALAS",
+		"text": "Elegir una escala y una posición y tocarla “en zig-zag” , es decir, cambiando de dirección de manera aleatoria. Primero con ritmo rígido y metrónomo, luego con ritmo libre.",
+		"comments": "La idea es que vayas tocando e improvisando el cuándo cambiar de dirección: si voy subiendo, empiezo a bajar, vuelvo a subir un rato, luego bajo, etc."
+	},
+	{
+		"title": "ESCALAS",
+		"text": "Elegir una escala y una posición y tocar todas sus formas lineales: de principio a fin, en zig-zag (cambios de dirección improvisados), por patrones.",
+		"comments": "Comenzar con Do mayor en primera posición, y con el tiempo ampliar a otras posiciones y otras escalas. Si ya tienes cancha, puedes ir cambiando de posición."
+	},
+	{
+		"title": "ESCALAS",
+		"text": "Elegir una escala y tocar todas las formas triádicas: por terceras, tríadas subiendo, tríadas bajando, una bajando y la otra subiendo, una subiendo y la otra bajando",
+		"comments": "Comenzar con Do mayor en primera posición, y con el tiempo ampliar a otras posiciones y otras escalas."
+	},
+	{
+		"title": "ESCALAS",
+		"text": "Graba o busca una pequeña base con un acorde estático, determina qué escala necesitas y empieza tocando la escala rígida, en zig-zag, por terceras; cada vez más libre en cuanto al ritmo, hasta que llegues a la improvisación.",
+		"comments": "La idea es terminar improvisando pero empiezas por la escala para mapear bien. Buscar soltura en el ritmo desde el principio."
+	},
+	{
+		"title": "ESCALAS",
+		"text": "Elige una escala, estudia previamente al menos dos o tres posiciones de la misma, y ahora intenta improvisar frases melódicas cambiando de posición deliberadamente (es decir, tocar “en diagonal”).",
+		"comments": "Aquí puedes usar también una base con un acorde solo."
+	},
+	{
+		"title": "TRÍADAS",
+		"text": "Elegir una tríada, y tocarla en todas sus posiciones horizontales (inversiones). Nombrar en voz alta cada nota del acorde. Repetir para otra especie y/o para otra fundamental.",
+		"comments": "La idea es comenzar por mayores y menores sobre fundamentales de notas naturales y luego pasar a fundamentales de notas alteradas y otras especies."
+	},
+	{
+		"title": "TRÍADAS",
+		"text": "Elegir una tríada, y tocarla en todas sus posiciones verticales (inversiones). Nombrar en voz alta cada nota del acorde. Repetir para otra especie y/o para otra fundamental.",
+		"comments": "La idea es comenzar por mayores y menores sobre fundamentales de notas naturales y luego pasar a fundamentales de notas alteradas y otras especies."
+	},
+	{
+		"title": "TRÍADAS",
+		"text": "Elegir una fundamental y construir primero una tríada mayor. Convertirla en menor bajando su 3ra. Convertirla ahora en disminuida bajando su 5ta. Ahora repetir el proceso a partir de la primera inversión de la tríada mayor, y después desde la segunda inversión.",
+		"comments": "Este ejercicio es tremendamente poderoso, aunque poco musical y un tanto aburrido."
+	},
+	{
+		"title": "TRÍADAS",
+		"text": "Armar una progresión de acordes en una tonalidad concreta (ej. II–V–I en Do) y tocarla solo con tríadas en estado fundamental, primero en bloque (plaqué) y luego arpegiando. Al terminar, transponer a otra tonalidad.",
+		"comments": "Es un ejercicio simple y sin mucha musicalidad, pero te sirve para reaccionar rápidamente y practicar la transposición."
+	},
+	{
+		"title": "TRÍADAS",
+		"text": "Armar una progresión de acordes en una tonalidad concreta (ej. II–V–I en Do) y tocarla con tríadas, usando inversiones. Buscar todas las combinaciones posibles de inversiones para la misma progresión.",
+		"comments": "Aquí entrenamos la conducción: es más musical y nos mantenemos en una sola tonalidad. Para mayor dificultad, usar progresiones más complejas."
+	},
+	{
+		"title": "TRÍADAS",
+		"text": "Escoger 2 acordes aleatorios, buscar posiciones e inversiones para tocar cada uno y luego enlazar esos dos acordes de todas las maneras posibles, buscando un movimiento suave (conducción de voces).",
+		"comments": "Este ejercicio es crucial para desarrollar la agilidad de conducción en un entorno controlado de solo 2 acordes. Si se te hace fácil, pasar a 3 acordes."
+	},
+	{
+		"title": "TRÍADAS",
+		"text": "Elegir una canción simple, que te sepas con las formas típicas, y llévala a las tríadas, usando todos los medios disponibles mientras puedas tocarlo de forma fluida.",
+		"comments": "La idea es comenzar con tríadas en estado fundamental y luego buscar inversiones y conducciones para estos acordes (son infinitas las combinaciones posibles)."
+	},
+	{
+		"title": "TRÍADAS",
+		"text": "Usar tríadas como material melódico: grabar una pequeña base lenta de dos acordes (puedes tocarlos como prefieras) y luego crear pequeñas melodías con sentido, usando las tríadas y alguna nota de paso.",
+		"comments": "Una variante interesante es, en vez de crear una melodía, crear una línea de bajo. En este caso, prioriza las fundamentales en tiempo 1."
+	},
+	{
+		"title": "INTERVALOS",
+		"text": "Elegir un intervalo (ej. 3ra menor, 6ta mayor, etc.) e improvisar con el concepto de intervalo fijo, usando distintas combinaciones de cuerdas.",
+		"comments": "Se puede hacer de forma melódica o armónica. Como elemento musical extra, se puede añadir una cuerda al aire como nota pedal."
+	},
+	{
+		"title": "INTERVALOS",
+		"text": "Crear una melodía de 3 a 5 notas, memorizarla y decir las notas en voz alta. Ahora añadirle terceras mayores o menores por arriba, buscando todas las combinaciones posibles y diciendo los nombres en voz alta.",
+		"comments": ""
+	},
+	{
+		"title": "INTERVALOS",
+		"text": "Elegir un intervalo (ej. 5ta disminuida, 7ma menor, 6ta menor, etc.), ir buscando fundamentales al azar y construir a partir de esa nota el intervalo elegido, diciendo los nombres en voz alta.",
+		"comments": "Modificación: buscar otras formas el mismo intervalo, usar intervalos compuestos (2da=9na)."
+	},
+	{
+		"title": "INTERVALOS",
+		"text": "Elegir un intervalo genérico (5ta, 6ta, 7ma, etc., sin especie), y tocar la escala mayor de Do armonizando cada nota con ese intervalo, ajustando la especie a la escala. Ej. con terceras: do-mi, re-fa, mi-sol, fa-la, etc.",
+		"comments": "Lógicamente, la especie irá cambiando: mayor, menor, menor, mayor, etc. No debería aparecer ningun bemol ni sostenido."
+	},
+	{
+		"title": "INTERVALOS",
+		"text": "Elegir un intervalo y una nota de partida. Construir el intervalo a partir de dicha nota y, desde la nota de llegada, volver a construir el mismo intervalo. Ej. con tercera mayor: Do - Mi♭; Mi♭ - Sol♭; Fa♯- La; etc.",
+		"comments": "Usar el equivalente enarmónico (sostenido=bemol) cuando sea más práctico. Para mayor dificultad, usar dobles bemoles o sostenidos"
+	},
+	{
+		"title": "INTERVALOS",
+		"text": "Elegir un intervalo genérico (5ta, 6ta, 7ma, etc., sin especie), y tocar la escala mayor armonizando cada nota con ese intervalo, ajustando la especie a la escala. Ej. con terceras: do-mi, re-fa, mi- sol, fa-la, etc.",
+		"comments": ""
+	}
+]
