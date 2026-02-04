@@ -18,6 +18,15 @@
 		acordes_complejos_checkbox
 	);
 
+	let alguno_seleccionado = $derived(
+		notas_mapeo_checkbox ||
+		intervalos_checkbox ||
+		triadas_checkbox ||
+		escalas_checkbox ||
+		caged_checkbox ||
+		acordes_complejos_checkbox
+	);
+
 	let selectedItem = $state(data[0]);
 
 	function selectAll() {
@@ -194,11 +203,32 @@
 	</div>
 
 	<div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200 w-full max-w-md">
-		<h2 class="text-xl font-bold text-indigo-600 mb-2">{selectedItem.title}</h2>
-		<p class="text-gray-800 text-lg mb-4">{selectedItem.text}</p>
-		{#if selectedItem.comments}
-			<div class="bg-gray-50 p-3 rounded border-l-4 border-indigo-400">
-				<p class="text-sm text-gray-600 italic">{selectedItem.comments}</p>
+		{#if alguno_seleccionado}
+			<h2 class="text-xl font-bold text-indigo-600 mb-2">{selectedItem.title}</h2>
+			<p class="text-gray-800 text-lg mb-4">{selectedItem.text}</p>
+			{#if selectedItem.comments}
+				<div class="bg-gray-50 p-3 rounded border-l-4 border-indigo-400">
+					<p class="text-sm text-gray-600 italic">{selectedItem.comments}</p>
+				</div>
+			{/if}
+		{:else}
+			<div class="flex flex-col items-center justify-center py-8 text-center">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="48"
+					height="48"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="lucide lucide-info text-indigo-400 mb-4"
+					><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg
+				>
+				<p class="text-gray-500 text-lg font-medium">
+					Por favor, selecciona alguna opción para comenzar.
+				</p>
 			</div>
 		{/if}
 	</div>
