@@ -298,8 +298,8 @@
 			</button>
 			<button
 				onclick={deselectAll}
-				disabled={!todosSeleccionados}
-				class="w-full bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded-lg transition-colors shadow-md flex items-center justify-center gap-2 text-sm"
+				disabled={!algunoSeleccionado}
+				class="w-full bg-red-600 hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded-lg transition-colors shadow-md flex items-center justify-center gap-2 text-sm"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
