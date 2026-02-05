@@ -2,60 +2,60 @@
 	import data from '$lib/assets/data.json';
 	import { onMount } from 'svelte';
 
-	let notas_mapeo_checkbox = $state(true);
-	let intervalos_checkbox = $state(true);
-	let triadas_checkbox = $state(true);
-	let escalas_checkbox = $state(true);
-	let caged_checkbox = $state(true);
-	let acordes_complejos_checkbox = $state(true);
+	let notasMapeoCheckbox = $state(true);
+	let intervalosCheckbox = $state(true);
+	let triadasCheckbox = $state(true);
+	let escalasCheckbox = $state(true);
+	let cagedCheckbox = $state(true);
+	let acordesComplejosCheckbox = $state(true);
 	
-	let todos_seleccionados = $derived(
-		notas_mapeo_checkbox &&
-		intervalos_checkbox &&
-		triadas_checkbox &&
-		escalas_checkbox &&
-		caged_checkbox &&
-		acordes_complejos_checkbox
+	let todosSeleccionados = $derived(
+		notasMapeoCheckbox &&
+		intervalosCheckbox &&
+		triadasCheckbox &&
+		escalasCheckbox &&
+		cagedCheckbox &&
+		acordesComplejosCheckbox
 	);
 
-	let alguno_seleccionado = $derived(
-		notas_mapeo_checkbox ||
-		intervalos_checkbox ||
-		triadas_checkbox ||
-		escalas_checkbox ||
-		caged_checkbox ||
-		acordes_complejos_checkbox
+	let algunoSeleccionado = $derived(
+		notasMapeoCheckbox ||
+		intervalosCheckbox ||
+		triadasCheckbox ||
+		escalasCheckbox ||
+		cagedCheckbox ||
+		acordesComplejosCheckbox
 	);
 
 	let selectedItem = $state(data[0]);
 
 	function selectAll() {
-		notas_mapeo_checkbox = true;
-		intervalos_checkbox = true;
-		triadas_checkbox = true;
-		escalas_checkbox = true;
-		caged_checkbox = true;
-		acordes_complejos_checkbox = true;
+		notasMapeoCheckbox = true;
+		intervalosCheckbox = true;
+		triadasCheckbox = true;
+		escalasCheckbox = true;
+		cagedCheckbox = true;
+		acordesComplejosCheckbox = true;
 	}
 
 	function deselectAll() {
-		notas_mapeo_checkbox = false;
-		intervalos_checkbox = false;
-		triadas_checkbox = false;
-		escalas_checkbox = false;
-		caged_checkbox = false;
-		acordes_complejos_checkbox = false;
+		notasMapeoCheckbox = false;
+		intervalosCheckbox = false;
+		triadasCheckbox = false;
+		escalasCheckbox = false;
+		cagedCheckbox = false;
+		acordesComplejosCheckbox = false;
 	}
 
 	function getRandomItem() {
 
 		const selectedTitles: string[] = [];
-		if (notas_mapeo_checkbox) selectedTitles.push('NOTAS Y MAPEO');
-		if (intervalos_checkbox) selectedTitles.push('INTERVALOS');
-		if (triadas_checkbox) selectedTitles.push('TRÍADAS');
-		if (escalas_checkbox) selectedTitles.push('ESCALAS');
-		if (caged_checkbox) selectedTitles.push('CAGED');
-		if (acordes_complejos_checkbox) selectedTitles.push('ACORDES COMPLEJOS');
+		if (notasMapeoCheckbox) selectedTitles.push('NOTAS Y MAPEO');
+		if (intervalosCheckbox) selectedTitles.push('INTERVALOS');
+		if (triadasCheckbox) selectedTitles.push('TRÍADAS');
+		if (escalasCheckbox) selectedTitles.push('ESCALAS');
+		if (cagedCheckbox) selectedTitles.push('CAGED');
+		if (acordesComplejosCheckbox) selectedTitles.push('ACORDES COMPLEJOS');
 
 		const filteredData = data.filter((item) => selectedTitles.includes(item.title));
 
@@ -79,7 +79,7 @@
 		<div class="options flex flex-col justify-center space-y-2">
 			<div class="flex items-center space-x-2">
 				<input
-					bind:checked={notas_mapeo_checkbox}
+					bind:checked={notasMapeoCheckbox}
 					type="checkbox"
 					id="notas-mapeo"
 					name="notas-mapeo"
@@ -88,7 +88,7 @@
 			</div>
 			<div class="flex items-center space-x-2">
 				<input
-					bind:checked={intervalos_checkbox}
+					bind:checked={intervalosCheckbox}
 					type="checkbox"
 					id="intervalos"
 					name="intervalos"
@@ -97,7 +97,7 @@
 			</div>
 			<div class="flex items-center space-x-2">
 				<input
-					bind:checked={triadas_checkbox}
+					bind:checked={triadasCheckbox}
 					type="checkbox"
 					id="triadas"
 					name="triadas"
@@ -106,7 +106,7 @@
 			</div>
 			<div class="flex items-center space-x-2">
 				<input
-					bind:checked={escalas_checkbox}
+					bind:checked={escalasCheckbox}
 					type="checkbox"
 					id="escalas"
 					name="escalas"
@@ -115,7 +115,7 @@
 			</div>
 			<div class="flex items-center space-x-2">
 				<input
-					bind:checked={caged_checkbox}
+					bind:checked={cagedCheckbox}
 					type="checkbox"
 					id="caged"
 					name="caged"
@@ -124,7 +124,7 @@
 			</div>
 			<div class="flex items-center space-x-2">
 				<input
-					bind:checked={acordes_complejos_checkbox}
+					bind:checked={acordesComplejosCheckbox}
 					type="checkbox"
 					id="acordes-complejos"
 					name="acordes-complejos"
@@ -158,7 +158,7 @@
 		<div class="flex flex-row space-x-1 mt-3">
 			<button
 				onclick={selectAll}
-				disabled={todos_seleccionados}
+				disabled={todosSeleccionados}
 				class="w-full bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded-lg transition-colors shadow-md flex items-center justify-center gap-2 text-sm"
 			>
 				<svg
@@ -180,7 +180,7 @@
 			</button>
 			<button
 				onclick={deselectAll}
-				disabled={!todos_seleccionados}
+				disabled={!todosSeleccionados}
 				class="w-full bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded-lg transition-colors shadow-md flex items-center justify-center gap-2 text-sm"
 			>
 				<svg
@@ -203,7 +203,7 @@
 	</div>
 
 	<div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200 w-full max-w-md">
-		{#if alguno_seleccionado}
+		{#if algunoSeleccionado}
 			<h2 class="text-xl font-bold text-indigo-600 mb-2">{selectedItem.title}</h2>
 			<p class="text-gray-800 text-lg mb-4">{selectedItem.text}</p>
 			{#if selectedItem.comments}
