@@ -2,12 +2,26 @@
 	import data from '$lib/assets/data.json';
 	import { onMount } from 'svelte';
 
+	let initialize = $state(false);
 	let notasMapeoCheckbox = $state(true);
 	let intervalosCheckbox = $state(true);
 	let triadasCheckbox = $state(true);
 	let escalasCheckbox = $state(true);
 	let cagedCheckbox = $state(true);
 	let acordesComplejosCheckbox = $state(true);
+
+	$effect(() => {
+		if(!initialize) return
+		const state = {
+			notasMapeoCheckbox,
+			intervalosCheckbox,
+			triadasCheckbox,
+			escalasCheckbox,
+			cagedCheckbox,
+			acordesComplejosCheckbox
+		};
+		localStorage.setItem('guitar-seminar-state', JSON.stringify(state));
+	});
 	
 	let todosSeleccionados = $derived(
 		notasMapeoCheckbox &&
@@ -70,10 +84,23 @@
 	}
 
 	onMount(() => {
+		const fromLocalStorage = localStorage.getItem('guitar-seminar-state');
+		if (fromLocalStorage) {
+			const initialState = JSON.parse(fromLocalStorage);
+			notasMapeoCheckbox = initialState.notasMapeoCheckbox
+			intervalosCheckbox = initialState.intervalosCheckbox
+			triadasCheckbox = initialState.triadasCheckbox
+			escalasCheckbox = initialState.escalasCheckbox
+			cagedCheckbox = initialState.cagedCheckbox
+			acordesComplejosCheckbox = initialState.acordesComplejosCheckbox
+		}
+		initialize = true;
+
 		getRandomItem();
 	});
 </script>
 
+{#if initialize}
 <div class="flex flex-col md:flex-row items-center md:items-start justify-center p-8 gap-8">
 	<div class="random-form bg-white p-6 rounded-lg shadow-md w-full max-w-md">
 		<div class="options flex flex-col justify-center space-y-2">
@@ -234,3 +261,4 @@
 	</div>
 
 </div>
+{/if}
