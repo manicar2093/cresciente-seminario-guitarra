@@ -104,59 +104,149 @@
 <div class="flex flex-col md:flex-row items-center md:items-start justify-center p-8 gap-8">
 	<div class="random-form bg-white p-6 rounded-lg shadow-md w-full max-w-md">
 		<div class="options flex flex-col justify-center space-y-2">
-			<div class="flex items-center space-x-2">
-				<input
-					bind:checked={notasMapeoCheckbox}
-					type="checkbox"
-					id="notas-mapeo"
-					name="notas-mapeo"
-				/>
-				<label for="notas-mapeo">Notas y mapeo</label>
+			<div 
+				class="flex items-center justify-between cursor-pointer"
+				onclick={() => (notasMapeoCheckbox = !notasMapeoCheckbox)}
+				onkeydown={(e) => e.key === 'Enter' && (notasMapeoCheckbox = !notasMapeoCheckbox)}
+				role="button"
+				tabindex="0"
+			>
+				<label for="notas-mapeo" class="text-sm font-medium text-gray-700 cursor-pointer">Notas y mapeo</label>
+				<button
+					type="button"
+					role="switch"
+					aria-checked={notasMapeoCheckbox}
+					onclick={(e) => {
+						e.stopPropagation();
+						notasMapeoCheckbox = !notasMapeoCheckbox;
+					}}
+					class="{notasMapeoCheckbox ? 'bg-indigo-600' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+				>
+					<span
+						aria-hidden="true"
+						class="{notasMapeoCheckbox ? 'translate-x-5' : 'translate-x-0'} pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+					></span>
+				</button>
 			</div>
-			<div class="flex items-center space-x-2">
-				<input
-					bind:checked={intervalosCheckbox}
-					type="checkbox"
-					id="intervalos"
-					name="intervalos"
-				/>
-				<label for="intervalos">Intervalos</label>
+			<div 
+				class="flex items-center justify-between cursor-pointer"
+				onclick={() => (intervalosCheckbox = !intervalosCheckbox)}
+				onkeydown={(e) => e.key === 'Enter' && (intervalosCheckbox = !intervalosCheckbox)}
+				role="button"
+				tabindex="0"
+			>
+				<label for="intervalos" class="text-sm font-medium text-gray-700 cursor-pointer">Intervalos</label>
+				<button
+					type="button"
+					role="switch"
+					aria-checked={intervalosCheckbox}
+					onclick={(e) => {
+						e.stopPropagation();
+						intervalosCheckbox = !intervalosCheckbox;
+					}}
+					class="{intervalosCheckbox ? 'bg-indigo-600' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+				>
+					<span
+						aria-hidden="true"
+						class="{intervalosCheckbox ? 'translate-x-5' : 'translate-x-0'} pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+					></span>
+				</button>
 			</div>
-			<div class="flex items-center space-x-2">
-				<input
-					bind:checked={triadasCheckbox}
-					type="checkbox"
-					id="triadas"
-					name="triadas"
-				/>
-				<label for="triadas">Triadas</label>
+			<div 
+				class="flex items-center justify-between cursor-pointer"
+				onclick={() => (triadasCheckbox = !triadasCheckbox)}
+				onkeydown={(e) => e.key === 'Enter' && (triadasCheckbox = !triadasCheckbox)}
+				role="button"
+				tabindex="0"
+			>
+				<label for="triadas" class="text-sm font-medium text-gray-700 cursor-pointer">Triadas</label>
+				<button
+					type="button"
+					role="switch"
+					aria-checked={triadasCheckbox}
+					onclick={(e) => {
+						e.stopPropagation();
+						triadasCheckbox = !triadasCheckbox;
+					}}
+					class="{triadasCheckbox ? 'bg-indigo-600' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+				>
+					<span
+						aria-hidden="true"
+						class="{triadasCheckbox ? 'translate-x-5' : 'translate-x-0'} pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+					></span>
+				</button>
 			</div>
-			<div class="flex items-center space-x-2">
-				<input
-					bind:checked={escalasCheckbox}
-					type="checkbox"
-					id="escalas"
-					name="escalas"
-				/>
-				<label for="escalas">Escalas</label>
+			<div 
+				class="flex items-center justify-between cursor-pointer"
+				onclick={() => (escalasCheckbox = !escalasCheckbox)}
+				onkeydown={(e) => e.key === 'Enter' && (escalasCheckbox = !escalasCheckbox)}
+				role="button"
+				tabindex="0"
+			>
+				<label for="escalas" class="text-sm font-medium text-gray-700 cursor-pointer">Escalas</label>
+				<button
+					type="button"
+					role="switch"
+					aria-checked={escalasCheckbox}
+					onclick={(e) => {
+						e.stopPropagation();
+						escalasCheckbox = !escalasCheckbox;
+					}}
+					class="{escalasCheckbox ? 'bg-indigo-600' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+				>
+					<span
+						aria-hidden="true"
+						class="{escalasCheckbox ? 'translate-x-5' : 'translate-x-0'} pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+					></span>
+				</button>
 			</div>
-			<div class="flex items-center space-x-2">
-				<input
-					bind:checked={cagedCheckbox}
-					type="checkbox"
-					id="caged"
-					name="caged"
-				/>
-				<label for="caged">CAGED</label>
+			<div 
+				class="flex items-center justify-between cursor-pointer"
+				onclick={() => (cagedCheckbox = !cagedCheckbox)}
+				onkeydown={(e) => e.key === 'Enter' && (cagedCheckbox = !cagedCheckbox)}
+				role="button"
+				tabindex="0"
+			>
+				<label for="caged" class="text-sm font-medium text-gray-700 cursor-pointer">CAGED</label>
+				<button
+					type="button"
+					role="switch"
+					aria-checked={cagedCheckbox}
+					onclick={(e) => {
+						e.stopPropagation();
+						cagedCheckbox = !cagedCheckbox;
+					}}
+					class="{cagedCheckbox ? 'bg-indigo-600' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+				>
+					<span
+						aria-hidden="true"
+						class="{cagedCheckbox ? 'translate-x-5' : 'translate-x-0'} pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+					></span>
+				</button>
 			</div>
-			<div class="flex items-center space-x-2">
-				<input
-					bind:checked={acordesComplejosCheckbox}
-					type="checkbox"
-					id="acordes-complejos"
-					name="acordes-complejos"
-				/>
-				<label for="acordes-complejos">Acordes complejos</label>
+			<div 
+				class="flex items-center justify-between cursor-pointer"
+				onclick={() => (acordesComplejosCheckbox = !acordesComplejosCheckbox)}
+				onkeydown={(e) => e.key === 'Enter' && (acordesComplejosCheckbox = !acordesComplejosCheckbox)}
+				role="button"
+				tabindex="0"
+			>
+				<label for="acordes-complejos" class="text-sm font-medium text-gray-700 cursor-pointer">Acordes complejos</label>
+				<button
+					type="button"
+					role="switch"
+					aria-checked={acordesComplejosCheckbox}
+					onclick={(e) => {
+						e.stopPropagation();
+						acordesComplejosCheckbox = !acordesComplejosCheckbox;
+					}}
+					class="{acordesComplejosCheckbox ? 'bg-indigo-600' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+				>
+					<span
+						aria-hidden="true"
+						class="{acordesComplejosCheckbox ? 'translate-x-5' : 'translate-x-0'} pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"
+					></span>
+				</button>
 			</div>
 		</div>
 		<button
