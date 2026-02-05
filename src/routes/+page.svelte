@@ -21,6 +21,7 @@
 			acordesComplejosCheckbox
 		};
 		localStorage.setItem('guitar-seminar-state', JSON.stringify(state));
+		getRandomItem();
 	});
 	
 	let todosSeleccionados = $derived(
