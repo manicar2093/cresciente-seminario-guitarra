@@ -1,38 +1,27 @@
-# sv
+# Seminario de Guitarra
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Una aplicación web interactiva diseñada para ayudar a guitarristas a practicar teoría musical y técnica en el mástil a través de ejercicios aleatorios categorizados.
 
-## Creating a project
+## Descripción
 
-If you're seeing this, you've probably already done this step. Congrats!
+Esta herramienta permite a los usuarios seleccionar diferentes áreas de estudio y generar ejercicios al azar para dinamizar sus sesiones de práctica. Las categorías incluyen:
 
-```sh
-# create a new project in the current directory
-npx sv create
+- **Notas y Mapeo**: Ubicación de notas naturales, sostenidos y bemoles en todo el mástil.
+- **Intervalos**: Identificación y ejecución de intervalos desde distintas fundamentales.
+- **Tríadas**: Práctica de tríadas mayores, menores, aumentadas y disminuidas en diferentes grupos de cuerdas.
+- **Escalas**: Trabajo sobre escalas mayores, menores y sus posiciones.
+- **Sistema CAGED**: Aplicación del sistema CAGED para visualización de acordes y arpegios.
+- **Acordes Complejos**: Exploración de acordes con séptima, tensiones (9, 11, 13) y enlaces armónicos.
 
-# create a new project in my-app
-npx sv create my-app
-```
+## Créditos
 
-## Developing
+Todo el contenido de los ejercicios, textos y la metodología didáctica incluida en esta aplicación pertenecen a **[Cresciente](https://cresciente.net/)**. 
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Esta herramienta ha sido creada como un complemento para facilitar la práctica de los conceptos enseñados en su seminario **[De la teoría al diapasón: entendiendo la guitarra (09-25)](https://cresciente.net/cursos/de-la-teoria-al-diapason-entendiendo-la-guitarra-09-25/)**
 
-```sh
-npm run dev
+## Licencia
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+---
+Desarrollado para mejorar la fluidez y el conocimiento del mástil de la guitarra.
