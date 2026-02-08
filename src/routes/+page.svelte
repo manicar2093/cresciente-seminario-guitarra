@@ -121,7 +121,7 @@
 						e.stopPropagation();
 						notasMapeoCheckbox = !notasMapeoCheckbox;
 					}}
-					class="{notasMapeoCheckbox ? 'bg-indigo-600' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+					class="{notasMapeoCheckbox ? 'bg-primary' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
 				>
 					<span
 						aria-hidden="true"
@@ -145,7 +145,7 @@
 						e.stopPropagation();
 						intervalosCheckbox = !intervalosCheckbox;
 					}}
-					class="{intervalosCheckbox ? 'bg-indigo-600' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+					class="{intervalosCheckbox ? 'bg-primary' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
 				>
 					<span
 						aria-hidden="true"
@@ -169,7 +169,7 @@
 						e.stopPropagation();
 						triadasCheckbox = !triadasCheckbox;
 					}}
-					class="{triadasCheckbox ? 'bg-indigo-600' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+					class="{triadasCheckbox ? 'bg-primary' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
 				>
 					<span
 						aria-hidden="true"
@@ -193,7 +193,7 @@
 						e.stopPropagation();
 						escalasCheckbox = !escalasCheckbox;
 					}}
-					class="{escalasCheckbox ? 'bg-indigo-600' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+					class="{escalasCheckbox ? 'bg-primary' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
 				>
 					<span
 						aria-hidden="true"
@@ -217,7 +217,7 @@
 						e.stopPropagation();
 						cagedCheckbox = !cagedCheckbox;
 					}}
-					class="{cagedCheckbox ? 'bg-indigo-600' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+					class="{cagedCheckbox ? 'bg-primary' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
 				>
 					<span
 						aria-hidden="true"
@@ -241,7 +241,7 @@
 						e.stopPropagation();
 						acordesComplejosCheckbox = !acordesComplejosCheckbox;
 					}}
-					class="{acordesComplejosCheckbox ? 'bg-indigo-600' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+					class="{acordesComplejosCheckbox ? 'bg-primary' : 'bg-gray-200'} relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
 				>
 					<span
 						aria-hidden="true"
@@ -252,7 +252,7 @@
 		</div>
 		<button
 			onclick={getRandomItem}
-			class="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition-colors shadow-md cursor-pointer flex items-center justify-center gap-2"
+			class="mt-6 w-full bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded-lg transition-colors shadow-md cursor-pointer flex items-center justify-center gap-2"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -322,10 +322,10 @@
 
 	<div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200 w-full max-w-md">
 		{#if algunoSeleccionado}
-			<h2 class="text-xl font-bold text-indigo-600 mb-2">{selectedItem.title}</h2>
+			<h2 class="text-xl font-bold text-primary mb-2">{selectedItem.title}</h2>
 			<p class="text-gray-800 text-lg mb-4">{selectedItem.text}</p>
 			{#if selectedItem.comments}
-				<div class="bg-gray-50 p-3 rounded border-l-4 border-indigo-400">
+				<div class="bg-gray-50 p-3 rounded border-l-4 border-secondary">
 					<p class="text-sm text-gray-600 italic">{selectedItem.comments}</p>
 				</div>
 			{/if}

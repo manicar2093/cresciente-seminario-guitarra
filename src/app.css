@@ -1,3 +1,16 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+@theme {
+  --color-primary: #f29d00;
+  --color-primary-dark: #d68a00;
+  --color-secondary: #9236a8;
+  --color-accent: #2da668;
+  --color-indigo-600: var(--color-primary);
+  --color-indigo-700: var(--color-primary-dark);
+}
+
+body {
+  @apply bg-orange-50 text-gray-900;
+}
