@@ -102,7 +102,7 @@
 </script>
 
 {#if initialize}
-<div class="flex flex-col md:flex-row items-center md:items-start justify-center p-8 gap-8">
+<div class="flex flex-col md:flex-row items-center md:items-start justify-center p-3 gap-8">
 	<div class="random-form bg-white p-6 rounded-lg shadow-md w-full max-w-md">
 		<div class="options flex flex-col justify-center space-y-2">
 			<div 
@@ -277,7 +277,7 @@
 			<button
 				onclick={selectAll}
 				disabled={todosSeleccionados}
-				class="w-full bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded-lg transition-colors shadow-md flex items-center justify-center gap-2 text-sm"
+				class="w-full bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded-lg transition-colors shadow-md flex items-center justify-center gap-2 text-xs"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -294,12 +294,12 @@
 						d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
 					/></svg
 				>
-				Seleccionar Todos
+				Activar todos
 			</button>
 			<button
 				onclick={deselectAll}
 				disabled={!algunoSeleccionado}
-				class="w-full bg-red-600 hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded-lg transition-colors shadow-md flex items-center justify-center gap-2 text-sm"
+				class="w-full bg-red-600 hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-2 px-4 rounded-lg transition-colors shadow-md flex items-center justify-center gap-2 text-xs"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -314,7 +314,7 @@
 					class="lucide lucide-square"
 					><rect width="18" height="18" x="3" y="3" rx="2" /></svg
 				>
-				Deseleccionar Todos
+				Desactivar todos
 			</button>
 
 		</div>
