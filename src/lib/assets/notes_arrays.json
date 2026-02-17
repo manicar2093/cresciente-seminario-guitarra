@@ -1,0 +1,6 @@
+{
+	"natural": ["Do", "Re", "Mi", "Fa", "Sol", "La", "Si"],
+	"flat": ["Re♭", "Mi♭", "Sol♭", "La♭", "Si♭"],
+	"sharp": ["Do♯", "Re♯", "Fa♯", "Sol♯", "La♯"],
+	"all": ["Do", "Re", "Mi", "Fa", "Sol", "La", "Si", "Do♯", "Re♯", "Fa♯", "Sol♯", "La♯", "Re♭", "Mi♭", "Sol♭", "La♭", "Si♭"]
+}
