@@ -1,5 +1,6 @@
 <script lang="ts">
 	import data from '$lib/assets/data.json';
+	import notes_arrays from '$lib/assets/notes_arrays.json';
 	import { onMount } from 'svelte';
 
 	let initialize = $state(false);
@@ -9,6 +10,9 @@
 	let escalasCheckbox = $state(true);
 	let cagedCheckbox = $state(true);
 	let acordesComplejosCheckbox = $state(true);
+
+	let isModalOpen = $state(false);
+	let pickedNotes = $state<string[]>([]);
 
 	$effect(() => {
 		if(!initialize) return
@@ -82,6 +86,56 @@
 			const randomIndex = Math.floor(Math.random() * data.length);
 			selectedItem = data[randomIndex];
 		}
+	}
+
+	function pickNotes() {
+		const meta = selectedItem.meta;
+		if (!meta || !meta.notes_to_pick) return;
+
+		const type = meta.notes_to_pick as keyof typeof notes_arrays;
+		const count = meta.notes_to_pick_count || 1;
+		let availableNotes = [...notes_arrays[type]];
+		
+		// Mapa de enarmonías para evitar repeticiones musicales
+		const enharmonics: Record<string, string> = {
+			'Do♯': 'Re♭',
+			'Re♭': 'Do♯',
+			'Re♯': 'Mi♭',
+			'Mi♭': 'Re♯',
+			'Fa♯': 'Sol♭',
+			'Sol♭': 'Fa♯',
+			'Sol♯': 'La♭',
+			'La♭': 'Sol♯',
+			'La♯': 'Si♭',
+			'Si♭': 'La♯'
+		};
+
+		const selected: string[] = [];
+		for (let i = 0; i < count; i++) {
+			if (availableNotes.length === 0) break;
+			const randomIndex = Math.floor(Math.random() * availableNotes.length);
+			const picked = availableNotes.splice(randomIndex, 1)[0];
+			selected.push(picked);
+
+			// Eliminar enarmónico si existe para que no se repita musicalmente
+			const enharmonic = enharmonics[picked];
+			if (enharmonic) {
+				availableNotes = availableNotes.filter(n => n !== enharmonic);
+			}
+
+			// Eliminar notas con el mismo nombre base (evitar Solb y Sol# a la vez)
+			const baseName = picked.substring(0, picked.length > 2 ? 3 : 2); 
+			// Nota: En español los nombres son Do, Re, Mi, Fa, Sol, La, Si. 
+			// Do, Re, Mi, Fa, La, Si tienen 2 letras. Sol tiene 3.
+			// Los accidentes son ♯ (sharp) y ♭ (flat) que ocupan un caracter especial.
+			
+			// Una forma más segura es extraer la parte que no es el accidente
+			const baseNote = picked.replace(/[♯♭]/g, '');
+			availableNotes = availableNotes.filter(n => !n.startsWith(baseNote));
+		}
+		
+		pickedNotes = selected;
+		isModalOpen = true;
 	}
 
 	onMount(() => {
@@ -322,7 +376,30 @@
 
 	<div class="card bg-white p-6 rounded-xl shadow-lg border border-gray-200 w-full max-w-md">
 		{#if algunoSeleccionado}
-			<h2 class="text-xl font-bold text-primary mb-2">{selectedItem.title}</h2>
+			<div class="flex justify-between items-start mb-2">
+				<h2 class="text-xl font-bold text-primary">{selectedItem.title}</h2>
+				{#if selectedItem.meta?.notes_to_pick}
+					<button
+						onclick={pickNotes}
+						class="bg-secondary hover:bg-opacity-90 text-white p-2 rounded-full transition-all shadow-sm flex items-center justify-center"
+						title="Seleccionar notas"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="lucide lucide-music"
+							><path d="M9 18V5l12-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" /></svg
+						>
+					</button>
+				{/if}
+			</div>
 			<p class="text-gray-800 text-lg mb-4">{selectedItem.text}</p>
 			{#if selectedItem.comments}
 				<div class="bg-gray-50 p-3 rounded border-l-4 border-secondary">
@@ -350,6 +427,58 @@
 			</div>
 		{/if}
 	</div>
+
+	{#if isModalOpen}
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_static_element_interactions -->
+		<div 
+			class="fixed inset-0 backdrop-grayscale-100 bg-opacity-80 flex items-center justify-center p-4 z-50 transition-opacity"
+			onclick={() => isModalOpen = false}
+		>
+			<div 
+				class="bg-white rounded-2xl shadow-2xl p-8 max-w-sm w-full transform transition-all scale-100"
+				role="dialog"
+				aria-modal="true"
+				onclick={(e) => e.stopPropagation()}
+			>
+				<h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Notas seleccionadas</h3>
+				<div class="flex flex-wrap justify-center gap-4 mb-8">
+					{#each pickedNotes as nota}
+						<div class="bg-primary text-white text-3xl font-bold w-20 h-20 flex items-center justify-center rounded-xl shadow-lg border-2 border-primary-dark">
+							{nota}
+						</div>
+					{/each}
+				</div>
+				<div class="flex flex-col gap-3">
+					<button
+						onclick={pickNotes}
+						class="w-full bg-secondary hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-colors shadow-md text-lg flex items-center justify-center gap-2"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="20"
+							height="20"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="lucide lucide-rotate-cw"
+							><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /></svg
+						>
+						Cambiar notas
+					</button>
+					<button
+						onclick={() => isModalOpen = false}
+						class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-xl transition-colors shadow-sm text-lg"
+					>
+						Cerrar
+					</button>
+				</div>
+			</div>
+		</div>
+	{/if}
 
 </div>
 {/if}
